@@ -14,10 +14,10 @@ import sqlite3
 storage = MemoryStorage()
 database = "users.db"
 
-api_token = "5094482535:AAGyFsCLRWYXzutpnvaepjab-pKWDbqTFZ4"
+api_token = ""
 bot = Bot(token=api_token)
 dp = Dispatcher(bot, storage=storage)
-admin = "452917869"
+admin = ""
 logging.basicConfig(level=logging.DEBUG)
 
 
@@ -839,4 +839,4 @@ async def send_welcome(message: types.Message):
 
 if __name__ == '__main__':
     executor.start_polling(dp,
-                           skip_updates=True)  # функция, запускающая прослушку канала на наличие запросов от Telegram, непосредственный запуск бота
+                           skip_updates=True)
